@@ -197,6 +197,7 @@ class APP extends Component {
     );
   }
 }
+// 可以切换查看和编辑text的组件
 class EditText extends Component {
   constructor(props) {
     super(props);
