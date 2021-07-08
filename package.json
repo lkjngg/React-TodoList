@@ -1,5 +1,6 @@
 {
   "name": "test2",
+  "homepage": "https://Lin-Kangjing.io/React-TodoList",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
