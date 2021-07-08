@@ -23,4 +23,4 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.TodoList }} # TodoList 是我的 secret 名称，需要替换成你的
           BRANCH: master
           FOLDER: dist
-          REPOSITORY_NAME: Lin-Kangjing/Lin-Kangjing.github.io # 这是我的 github page 仓库
+          REPOSITORY_NAME: https://github.com/Lin-Kangjing/React-TodoList # 这是我的 github page 仓库
