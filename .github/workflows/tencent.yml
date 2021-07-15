@@ -20,7 +20,7 @@ jobs:
       with:
         secretId: ${{secrets.SECRETID}}
         secretKey: ${{secrets.SECRETKEY}}
-        EnvId: ${{secrets.ENV_ID}}
+        envId: ${{secrets.ENVID}}
      
     
     
