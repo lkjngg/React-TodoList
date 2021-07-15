@@ -3,5 +3,17 @@
   "version": "2.0",
   "framework": {
     "name": "todoList",
+    "plugins": {
+      "client": {
+        "use": "@cloudbase/framework-plugin-website",
+        "inputs": {
+          "installCommand": "npm install --prefer-offline --no-audit --progress=false",
+          "buildCommand": "npm run build",
+          "outputPath": "build",
+          "cloudPath": "/path",
+          "ignore": [".git", ".github", "node_modules", "cloudbaserc.js"]
+        }
+      }
+    }
   }
 }
