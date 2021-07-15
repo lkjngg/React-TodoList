@@ -1,25 +1,25 @@
 name: tencent
 on: 
  push:
-  branches: 
-   - master 
+    branches:
+      - master
   
 jobs:
- build-and-deploy:
-  runs-on: Windows Server 2012
-  steps:
-  - name: checkout
-    uses: actions/checkout@v2
-  - name: install and build
-    run: |
-     npm ci
-     npm run build
-  - name: Deploy to Tencent CloudBase
-    uses: TencentCloudBase/cloudbase-action@v2
-    with:
-      secretId: ${{secrets.secretId}}
-      secretKey: ${{secrets.secretKey}}
-      envId: ${{secrets.envId}}
+  build-and-deploy:
+    runs-on: Windows Server 2012
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+    - name: install and build
+      run: |
+        npm ci
+        npm run build
+    - name: Deploy to Tencent CloudBase
+      uses: TencentCloudBase/cloudbase-action@v2
+      with:
+        secretId: ${{secrets.secretId}}
+        secretKey: ${{secrets.secretKey}}
+        envId: ${{secrets.envId}}
      
     
     
