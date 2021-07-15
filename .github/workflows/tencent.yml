@@ -5,7 +5,7 @@ on:
   
 jobs:
  build-and-deploy:
-  runs-on: ubuntu-latest
+  runs-on: Windows Server 2012
   steps:
   - name: checkout
     uses: actions/checkout@v2
@@ -13,11 +13,12 @@ jobs:
     run: |
      npm ci
      npm run build
-  - name: deploy
-    uses: JamesIves/github-pages-deploy-action@4.1.4
-    with: 
-     BRANCH: tencent
-     FOLDER: build
+  - name: Deploy to Tencent CloudBase
+    uses: TencentCloudBase/cloudbase-action@v2
+    with:
+      secretId: ${{secrets.secretId}}
+      secretKey: ${{secrets.secretKey}}
+      envId: ${{secrets.envId}}
      
     
     
