@@ -1,0 +1,24 @@
+name: tencent
+on: 
+ push:
+  branches: master 
+  
+jobs:
+ build-and-deploy:
+  runs-on: ubuntu-latest
+  steps:
+  - name: checkout
+    uses: actions/checkout@v2
+  - name: install and build
+    run: |
+     npm ci
+     npm run build
+  - name: deploy
+    uses: JamesIves/github-pages-deploy-action@4.1.4
+    with: 
+     BRANCH: tencent
+     FOLDER: build
+     
+    
+    
+  
